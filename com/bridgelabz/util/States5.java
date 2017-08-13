@@ -14,11 +14,13 @@ public class States5{
 
 public static void main(String args[]){
 
+	int avg,a;
 	int mInput=Integer.parseInt(args[0]);
 
 	for(int i=0;i<mInput;i++){
         System.out.println(Math.random());
 	  System.out.println(Math.min());
 }
+	a=mInput/2
 }
 }
