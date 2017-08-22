@@ -6,41 +6,30 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
 
-/*class Declaration*/
-public class Binary{
+  public class Binary{
 
-/*Declaration of Main*/
-public static void main(String[] args){
+  static int Number;
+  public static void main(String[] args){
+  Number=Integer.parseInt(args[0]);
 
-/*Read in the command line argument*/
-int n=Integer.parseInt(args[0]);
+   int power=1;
+   while(power<=Number/2){
+   power*=2;
+   }
 
-/*set power to the largest power of 2 that is<=2*/
-int power=1;
-while(power<=n/2){
-power*=2;
-}
+   while(power>0){
+   if(Number<power){
+   System.out.print(0);
+   }
 
-/*check for presence of powers of 2 in n, from largest to smallest*/
-while(power>0){
-
-/*power is not prsent in n*/
-if(n<power){
-System.out.print(0);
-}
-
-/*power is present in n, so substract power from n*/
-else{
-System.out.print(1);
-n-=power;
-}
-
-/*next smallest power of 2*/
-power/=2;
-}
-System.out.println();
-}
+   else{
+   System.out.print(1);
+   Number-=power;
+   }
+    power/=2;
+   }
+    System.out.println();
+  }
 }
