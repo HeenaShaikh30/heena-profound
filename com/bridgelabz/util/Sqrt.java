@@ -6,30 +6,28 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
 
-/*class Declaration*/
-   public class Sqrt { 
-    
-    public static void main(String[] args) { 
+  public class Sqrt { 
 
-// read in the command-line argument
-        double c = Double.parseDouble(args[0]);
+    	staic double c,epsilon,t;
+ 
+  public static void main(String[] args) { 
 
-// relative error tolerance       
-double epsilon = 1e-15;    
-
-// estimate of the square root of c        
-double t = c;              
-
-// repeatedly apply Newton update step until desired precision is achieved
-while (Math.abs(t - c/t) > epsilon*t) {
-            t = (c/t + t) / 2.0;
+      c = Double.parseDouble(args[0]);
+        
+	   epsilon = 1e-15;    
+        
+ 	   t = c;                     
+ 	   while (Math.abs(t - c/t) > epsilon*t) {
+            
+	   t = (c/t + t) / 2.0;
         }
 
-// print out the estimate of the square root of c
-        System.out.println(t);
-    }
+      System.out.println(t);
+    
+  }
+
 
 }
+
