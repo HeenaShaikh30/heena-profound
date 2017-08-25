@@ -6,25 +6,19 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
 
-/*Import Declaration*/
 import java.util.Scanner;
 
-/*class Declaration*/
 public class SecondLargest_Smallest
 {
+   static int n, temp;
 
-/*Declarion of main*/
     public static void main(String[] args) 
     {
-/*Varible Declaration*/
-        int n, temp;
         Scanner s = new Scanner(System.in);
         System.out.print("Enter no. of elements you want in array:");
         n = s.nextInt();
-/*Array Declaration*/
 
         int a[] = new int[n];
         System.out.println("Enter all the elements:");
@@ -44,8 +38,6 @@ public class SecondLargest_Smallest
                 }
             }
         }
-/*Prints the result*/
         System.out.println("Second Largest:"+a[n-2]);
         System.out.println("Second Smallest:"+a[1]);
     }
-}
