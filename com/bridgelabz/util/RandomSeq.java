@@ -9,7 +9,7 @@
 package com.bridgelabz.util;
 
 public class RandomSeq {
-	staic int inputNo;
+staic int inputNo;
 public static void main(String args[]){
  
 	inputNo=Integer.parseInt(args[0]);
