@@ -10,7 +10,7 @@ package com.bridgelabz.util;
 
   public class Sqrt { 
 
-    	staic double c,epsilon,t;
+  staic double c,epsilon,t;
  
   public static void main(String[] args) { 
 
@@ -24,7 +24,7 @@ package com.bridgelabz.util;
 	   t = (c/t + t) / 2.0;
         }
 
-      System.out.println(t);
+           System.out.println(t);
     
   }
 
