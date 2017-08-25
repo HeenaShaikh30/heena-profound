@@ -6,31 +6,23 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
-
-/*class Declaration*/
 
 
 public class RandomInt {
+static int number;
+static double random;
  
-    public static void main(String[] args) { 
-        
-// a positive integer
-        
-int n = Integer.parseInt(args[0]);
+   	public static void main(String[] args) { 
+               
+	   number = Integer.parseInt(args[0]);
 
-        
-// a pseudo-random real between 0.0 and 1.0
-        
-double r = Math.random(); 
+    random = Math.random(); 
 
-        
-// a pseudo-random integer between 0 and n-1
-        
-int value = (int) (r * n);
+    int value = (int) (r * n);
 
-        
-System.out.println(value);
-    }
+    System.out.println(value);
+    
+  }
+
 }
