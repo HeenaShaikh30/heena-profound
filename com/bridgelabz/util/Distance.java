@@ -6,30 +6,24 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
 
-/*class Declaration*/
-public class Distance {
+  public class Distance {
+	static int Input1;
+	static int Input2;
 
-/*Declaration of main*/ 
-   public static void main(String[] args) {
+  public static void main(String[] args) {
       
+	Input1=Integer.parseInt(args[0]);
+ 	Input2=Integer.parseInt(args[1]);
 
-/*parse is a method which takes a string(input) as an argument and convert it in integer.
- input1,input2 are variables which stores the number enterd by the user as input*/
- int input1=Integer.parseInt(args[0]);
- int input2=Integer.parseInt(args[1]);
+  double dist=Math.sqrt(Input1*Input1 + Input2*Input2);
 
- /*performs the following operstions to calculate distance*/
-   double dist=Math.sqrt(input1*input1 + input2*input2);
+  System.out.println("Distance from(" +Input1+ "," +Input2+ ") to (0,0)=" +dist);
 
-/*prints the output*/
-    System.out.println("Distance from(" +input1+ "," +input2+ ") to (0,0)=" +dist);
+   }
 
 }
-
-  }
 
 
     
