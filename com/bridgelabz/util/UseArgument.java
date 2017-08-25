@@ -6,22 +6,19 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
-
-/*class Declaration*/
-
 
 public class UseArgument {
 
-    
-public static void main(String[] args) {
+ public static void main(String[] args) {
         
-System.out.print("Hi, ");
+    System.out.print("Hi, ");
         
-System.out.print(args[0]);
+	System.out.print(args[0]);
         
-System.out.println(". How are you?");
-    }
+	System.out.println(". How are you?");
+   
+ }
+
 
 }
