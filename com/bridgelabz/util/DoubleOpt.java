@@ -6,34 +6,30 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
+ 
+     class DoubleOpt {
+	static double input1;
+	static double input2;
+	static double input3;
 
-/*class Declaration*/
-class DoubleOpt {
+       public static void main(String[] args) {
 
-/*Declaration of main*/
-     public static void main(String[] args) {
+   	  input1=Double.parseDouble(args[0]);
+   	  input2=Double.parseDouble(args[1]);
+   	  input3=Double.parseDouble(args[2]); 
+ 
+          double result1 = (input1 + input2 * input3);
 
-/*parse is a method which takes a string(input) as an argument and convert in double.
- input1,input2,input3 are variables which stores the number enterd by the user as input*/ 
-
-   double input1=Double.parseDouble(args[0]);
-   double input2=Double.parseDouble(args[1]);
-   double input3=Double.parseDouble(args[2]); 
-
-  /*performs the following arithmatic operstions*/ 
-        double result1 = (input1 + input2 * input3);
-
-         double result2 = (input1 * input2 + input3);
+          double result2 = (input1 * input2 + input3);
 
           double result3 = (input1 % input2 + input3);
-/*prints the output*/ 
-    System.out.println("result of" +input1+ "+" +input2+ "*" +input3+ "=" +result1);
+ 
+          System.out.println("result of" +input1+ "+" +input2+ "*" +input3+ "=" +result1);
 
-     System.out.println("result of" +input1+ "*" +input2+ "+" +input3+ "=" +result2);
+          System.out.println("result of" +input1+ "*" +input2+ "+" +input3+ "=" +result2);
    
-      System.out.println("result of"+input1+"%"+input2+"+"+input3+"="+result3);     
+          System.out.println("result of"+input1+"%"+input2+"+"+input3+"="+result3);     
   
     }
   }
