@@ -6,70 +6,53 @@
 *@version:1.0
 *@since:10-8-2017
 ***************************************************************/
-/*package Naming Style*/
 package com.bridgelabz.util;
 
-/*class Declaration*/
-public class Gambler {
+   public class Gambler {
+   static int stake;
+   static int goal;
+   static int trials;
+    
  
 
-    public static void main(String[] args) {
+   public static void main(String[] args) {
  
-       int stake  = Integer.parseInt(args[0]);
- /* gambler's stating bankroll
-*/
-       int goal   = Integer.parseInt(args[1]);
- /*gambler's desired bankroll*/
+        stake  = Integer.parseInt(args[0]);
+        goal   = Integer.parseInt(args[1]);
 
-        int trials = Integer.parseInt(args[2]);
-/*number of trials to perform
+        trials = Integer.parseInt(args[2]);
 
-*/
- /*total number of bets made*/
+        int bets = 0; 
+        int wins = 0;       
 
-int bets = 0; 
-                
-/*total number of games won
-
-*/
-int wins = 0;       
-// repeat trials times
- 
-       for (int t = 0; t < trials; t++) {
+        for (int t = 0; t < trials; t++) {
 
   
-          // do one gambler's ruin simulation
- 
+          
            int cash = stake;
   
-          while (cash > 0 && cash < goal) {
+             while (cash > 0 && cash < goal) {
 
                 bets++;
              
-   if (Math.random() < 0.5)
- cash++;    
- // win $1
-   
-    else    
-   cash--;  
-   // lose $1
- 
-  }
+             if (Math.random() < 0.5)
+                  cash++;    
+             else    
+                  cash--;  
+    }
            
- if (cash == goal) 
-wins++;                
-// did gambler go achieve desired goal?
+             if (cash == goal) 
+                   wins++;                
         
 }
 
         
-// print results
-        
-System.out.println(wins + " wins of " + trials);
+    
+	System.out.println(wins + " wins of " + trials);
        
  System.out.println("Percent of games won = " + 100.0 * wins / trials);
         
-System.out.println("Avg # bets           = " + 1.0 * bets / trials);
+	System.out.println("Avg # bets           = " + 1.0 * bets / trials);
     }
 
 }
